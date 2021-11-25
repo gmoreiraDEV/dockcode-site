@@ -1,10 +1,13 @@
-import { Text } from "@chakra-ui/react";
+import HeroBanner from "@components/HeroBanner";
 import Layout from "@components/Layout";
+import Particles from "@components/Particles";
 
 export default function Home() {
   return (
     <Layout>
-      <Text color='brand.purple.500'>Teste</Text>
+      <>
+        <HeroBanner />
+      </>
     </Layout>
   );
 }

@@ -9,6 +9,7 @@ const theme = extendTheme({
       },
       pink: {
         500: "#FF0080",
+        900: "#9B205E",
       },
       gray: {
         100: "#EEEEEE",
@@ -16,6 +17,10 @@ const theme = extendTheme({
         900: "#09050C",
       },
     },
+  },
+  fonts: {
+    heading: "Unica One",
+    body: "Roboto",
   },
 });
 export default theme;
