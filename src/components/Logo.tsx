@@ -4,12 +4,12 @@ import { chakra, Box } from "@chakra-ui/react";
 
 const ChakraImage = chakra(Image);
 
-import dockcodeLogo from "@public/dockcode-logo.svg";
+import dockcodeLogo from "@public/img/dockcode-logo.svg";
 
 export default function Logo(): ReactElement {
   return (
     <Box p={4}>
-      <ChakraImage src={dockcodeLogo} width={50} height={50} alt='DOCKCODE' />
+      <ChakraImage src={dockcodeLogo} width={50} height={50} alt="DOCKCODE" />
     </Box>
   );
 }

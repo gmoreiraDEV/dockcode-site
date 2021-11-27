@@ -1,13 +1,16 @@
-import HeroBanner from "@components/HeroBanner";
 import Layout from "@components/Layout";
-import Particles from "@components/Particles";
+import HeroBanner from "@components/HeroBanner";
+import Clients from "@components/Clients";
+import Form from "@components/Form";
+import Plans from "@components/Plans";
 
 export default function Home() {
   return (
     <Layout>
-      <>
-        <HeroBanner />
-      </>
+      <HeroBanner />
+      <Clients />
+      <Form />
+      <Plans />
     </Layout>
   );
 }

@@ -21,6 +21,7 @@ const theme = extendTheme({
   fonts: {
     heading: "Unica One",
     body: "Roboto",
+    button: "Unica One",
   },
 });
 export default theme;
