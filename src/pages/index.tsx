@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Layout from "@components/Layout";
 import HeroBanner from "@components/HeroBanner";
 import Clients from "@components/Clients";
@@ -9,6 +10,9 @@ import { Schedule } from "@components/Schedule";
 export default function Home() {
   return (
     <Layout>
+      <Head>
+        <title>DOCKCODE</title>
+      </Head>
       <HeroBanner />
       <Clients />
       <Form />
