@@ -1,11 +1,16 @@
+import { useEffect } from "react";
 import type { AppProps } from "next/app";
 import Head from "next/head";
+import TagManager from "react-gtm-module";
 import { ChakraProvider, Container } from "@chakra-ui/react";
 
 import theme from "@styles/theme";
 import dockcodelogo from "@public/img/dockcodeLogo.png";
 
 function DockCode({ Component, pageProps }: AppProps) {
+  useEffect(() => {
+    TagManager.initialize({ gtmId: process.env.NEXT_ENV_GTM_ID });
+  }, []);
   return (
     <ChakraProvider theme={theme}>
       <Head>
