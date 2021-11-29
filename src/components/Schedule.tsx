@@ -28,7 +28,10 @@ export const Schedule = (props: Props) => {
         color='brand.gray.100'
         fontSize='2xl'
         fontFamily='Unica One'
-        textTransform='uppercase'>
+        textTransform='uppercase'
+        _hover={{
+          background: "brand.pink.900",
+        }}>
         receber mentoria gratuita
       </Button>
     </Box>

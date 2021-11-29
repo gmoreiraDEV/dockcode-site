@@ -4,7 +4,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 
 interface Props {
-  children: ReactElement[];
+  children?: ReactElement[];
 }
 
 export default function Layout({ children }: Props): ReactElement {

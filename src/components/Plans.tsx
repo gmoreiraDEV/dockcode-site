@@ -57,17 +57,17 @@ export default function Plans(): ReactElement {
           <PlanCards
             type='start'
             text='Aqui é o inicio de tudo, onde começamos nossa jornada juntos.'
-            buttonAddress='/planos/start'
+            buttonAddress='/planos'
           />
           <PlanCards
             type='advanced'
             text='Nesse plano começamos a dar passos mais largos em buscas de objetivos traçados pela estratégia correta para o seu negócio.'
-            buttonAddress='/planos/advanced'
+            buttonAddress='/planos'
           />
           <PlanCards
             type='premium'
             text='Esse é o maior plano e  é responsável para fazer usa marca atingir lugares que nunca esteve antes.'
-            buttonAddress='/planos/premium'
+            buttonAddress='/planos'
           />
         </Carousel>
       </Stack>

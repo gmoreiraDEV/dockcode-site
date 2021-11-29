@@ -8,7 +8,8 @@ export default function Nav(): ReactElement {
       display='flex'
       flex={1}
       justifyContent='space-around'
-      alignItems='center'>
+      alignItems='center'
+      color='brand.gray.100'>
       <Link
         p={2}
         fontWeight='bold'
@@ -21,7 +22,7 @@ export default function Nav(): ReactElement {
         href='/'>
         INÍCIO
       </Link>
-      <Link
+      {/* <Link
         p={2}
         fontWeight='bold'
         textDecoration='none'
@@ -32,7 +33,7 @@ export default function Nav(): ReactElement {
         }}
         href='#'>
         CASES
-      </Link>
+      </Link> */}
       <Link
         p={2}
         fontWeight='bold'
@@ -42,10 +43,10 @@ export default function Nav(): ReactElement {
           color: "brand.purple.900",
           borderRadius: "0",
         }}
-        href='#'>
-        SOLUÇÕES
+        href='/planos'>
+        PLANOS
       </Link>
-      <Link
+      {/* <Link
         p={2}
         fontWeight='bold'
         textDecoration='none'
@@ -56,7 +57,7 @@ export default function Nav(): ReactElement {
         }}
         href='#'>
         ORÇAMENTO
-      </Link>
+      </Link> */}
       <Link
         p={2}
         fontWeight='bold'
@@ -66,7 +67,7 @@ export default function Nav(): ReactElement {
           color: "brand.purple.900",
           borderRadius: "0",
         }}
-        href='#'>
+        href='/contato'>
         CONTATO
       </Link>
     </Box>
