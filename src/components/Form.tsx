@@ -1,4 +1,4 @@
-import React, { ReactElement } from "react";
+import React, { ReactElement, useEffect } from "react";
 import {
   Box,
   Heading,
@@ -8,21 +8,44 @@ import {
   Textarea,
   Button,
   Text,
+  useToast,
 } from "@chakra-ui/react";
 import ScheduleService from "@utils/scheduleService";
 import { useForm } from "react-hook-form";
 
 export default function Form(): ReactElement {
+  const toast = useToast();
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    reset,
+    formState: { isSubmitSuccessful, errors },
   } = useForm();
 
   async function onSubmit(data): Promise<any> {
-    ScheduleService(data);
-    console.log("page with form", data);
+    await ScheduleService(data)
+      .then(() => {
+        toast({
+          title: "Mentoria solicitada",
+          description: "Em breve entraremos em contato com você.",
+          status: "success",
+          duration: 9000,
+          isClosable: true,
+        });
+        reset();
+      })
+      .catch(() => {
+        toast({
+          title: "Ooops",
+          description:
+            "Aconteceu algo estranho aqui. Por favor, tente novamente.",
+          status: "error",
+          duration: 9000,
+          isClosable: true,
+        });
+      });
   }
+
   return (
     <Box
       background='brand.purple.500'

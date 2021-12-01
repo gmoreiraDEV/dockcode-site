@@ -1,5 +1,5 @@
 import { API, GRAPHQL_AUTH_MODE } from "@aws-amplify/api";
-import { CreateMentoringInput, CreateMentoringMutation } from "src/API";
+import { CreateMentoringInput } from "src/API";
 import { createMentoring } from "src/graphql/mutations";
 
 const ScheduleService = async (data) => {
@@ -19,11 +19,8 @@ const ScheduleService = async (data) => {
       variables: {
         input: createMentoringData,
       },
-
       authMode: GRAPHQL_AUTH_MODE.API_KEY,
-      // authToken: "da2-cgtsf7iiwbdxdpxovtgo2fywda",
     });
-    console.log("foi");
   } catch (error) {
     console.log(error);
   }
