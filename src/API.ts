@@ -78,6 +78,7 @@ export type Mentoring = {
   description?: string | null,
   createdAt: string,
   updatedAt: string,
+  owner?: string | null,
 };
 
 export type UpdateMentoringInput = {
@@ -149,6 +150,7 @@ export type CreateMentoringMutation = {
     description?: string | null,
     createdAt: string,
     updatedAt: string,
+    owner?: string | null,
   } | null,
 };
 
@@ -170,6 +172,7 @@ export type UpdateMentoringMutation = {
     description?: string | null,
     createdAt: string,
     updatedAt: string,
+    owner?: string | null,
   } | null,
 };
 
@@ -191,6 +194,7 @@ export type DeleteMentoringMutation = {
     description?: string | null,
     createdAt: string,
     updatedAt: string,
+    owner?: string | null,
   } | null,
 };
 
@@ -211,6 +215,7 @@ export type GetMentoringQuery = {
     description?: string | null,
     createdAt: string,
     updatedAt: string,
+    owner?: string | null,
   } | null,
 };
 
@@ -235,6 +240,7 @@ export type ListMentoringsQuery = {
       description?: string | null,
       createdAt: string,
       updatedAt: string,
+      owner?: string | null,
     } >,
     nextToken?: string | null,
   } | null,
@@ -253,6 +259,7 @@ export type OnCreateMentoringSubscription = {
     description?: string | null,
     createdAt: string,
     updatedAt: string,
+    owner?: string | null,
   } | null,
 };
 
@@ -269,6 +276,7 @@ export type OnUpdateMentoringSubscription = {
     description?: string | null,
     createdAt: string,
     updatedAt: string,
+    owner?: string | null,
   } | null,
 };
 
@@ -285,5 +293,6 @@ export type OnDeleteMentoringSubscription = {
     description?: string | null,
     createdAt: string,
     updatedAt: string,
+    owner?: string | null,
   } | null,
 };

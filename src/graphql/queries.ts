@@ -15,6 +15,7 @@ export const getMentoring = /* GraphQL */ `
       description
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -36,6 +37,7 @@ export const listMentorings = /* GraphQL */ `
         description
         createdAt
         updatedAt
+        owner
       }
       nextToken
     }

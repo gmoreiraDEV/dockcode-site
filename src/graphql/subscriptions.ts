@@ -15,6 +15,7 @@ export const onCreateMentoring = /* GraphQL */ `
       description
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -31,6 +32,7 @@ export const onUpdateMentoring = /* GraphQL */ `
       description
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -47,6 +49,7 @@ export const onDeleteMentoring = /* GraphQL */ `
       description
       createdAt
       updatedAt
+      owner
     }
   }
 `;

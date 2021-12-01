@@ -4,7 +4,7 @@ type Mentoring
     rules: [
       { allow: owner, operations: [create, update, delete, read] }
       { allow: private, operations: [read] }
-      { allow: public, operations: [create] }
+      { allow: public, operations: [create], provider: apiKey }
     ]
   ) {
   id: ID!
