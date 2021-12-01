@@ -9,8 +9,20 @@ import {
   Button,
   Text,
 } from "@chakra-ui/react";
+import ScheduleService from "@utils/scheduleService";
+import { useForm } from "react-hook-form";
 
 export default function Form(): ReactElement {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  async function onSubmit(data): Promise<any> {
+    ScheduleService(data);
+    console.log("page with form", data);
+  }
   return (
     <Box
       background='brand.purple.500'
@@ -24,8 +36,13 @@ export default function Form(): ReactElement {
         deixe seus dados e agende uma mentoria grátis
       </Heading>
 
-      <Stack as='form' spacing={3} width='70%'>
+      <Stack
+        as='form'
+        onSubmit={handleSubmit(onSubmit)}
+        spacing={3}
+        width='70%'>
         <Input
+          {...register("name")}
           variant='outline'
           placeholder='Nome:'
           borderWidth='2px'
@@ -45,6 +62,7 @@ export default function Form(): ReactElement {
           }}
         />
         <Input
+          {...register("email")}
           variant='outline'
           placeholder='Email:'
           borderWidth='2px'
@@ -64,6 +82,7 @@ export default function Form(): ReactElement {
           }}
         />
         <Input
+          {...register("phone")}
           variant='outline'
           placeholder='DDD + Telefone'
           borderWidth='2px'
@@ -83,6 +102,7 @@ export default function Form(): ReactElement {
           }}
         />
         <Input
+          {...register("company")}
           variant='outline'
           placeholder='Empresa'
           borderWidth='2px'
@@ -102,6 +122,7 @@ export default function Form(): ReactElement {
           }}
         />
         <Input
+          {...register("site")}
           variant='outline'
           placeholder='Site: (Opcional)'
           borderWidth='2px'
@@ -121,6 +142,7 @@ export default function Form(): ReactElement {
           }}
         />
         <Select
+          {...register("employees")}
           variant='outline'
           placeholder='Número de funcionários'
           borderWidth='2px'
@@ -146,6 +168,7 @@ export default function Form(): ReactElement {
           <option value='Mais de 15'>Mais de 15</option>
         </Select>
         <Textarea
+          {...register("description")}
           variant='outline'
           placeholder='Conte um pouco sobre a sua empresa e quais seus objetivos: (Opcional)'
           borderWidth='2px'
@@ -165,6 +188,7 @@ export default function Form(): ReactElement {
           }}
         />
         <Button
+          type='submit'
           textTransform='uppercase'
           color='brand.gray.100'
           bgColor='brand.pink.500'

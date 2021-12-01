@@ -1,0 +1,18 @@
+type Mentoring
+  @model
+  @auth(
+    rules: [
+      { allow: owner, operations: [create, update, delete, read] }
+      { allow: private, operations: [read] }
+      { allow: public, operations: [create] }
+    ]
+  ) {
+  id: ID!
+  name: String!
+  email: String
+  phone: String
+  company: String
+  site: String
+  employees: String
+  description: String
+}
