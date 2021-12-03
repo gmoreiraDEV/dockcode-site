@@ -22,12 +22,19 @@ export default function Footer(): ReactElement {
         display='flex'
         justifyContent='center'
         alignItems='center'
-        // width='35%'
-        textAlign='left'
+        flexDirection={["column", "column", "row"]}
+        textAlign={["center", "center", "left"]}
         textTransform='uppercase'
-        fontSize='4xl'
+        fontSize={["sm", "md", "4xl"]}
         fontFamily='Unica One'>
-        {year} <Icon as={MdCopyright} /> todos os direitos reservados
+        <Text
+          display='flex'
+          justifyContent='center'
+          alignItems='center'
+          fontWeight='bold'>
+          {year} <Icon as={MdCopyright} />
+        </Text>
+        todos os direitos reservados
       </Text>
       <Image src={dockcodeLogo.src} alt='DOCKCODE' width='25%' />
     </Box>

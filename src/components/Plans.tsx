@@ -26,7 +26,7 @@ export default function Plans(): ReactElement {
         display='flex'
         justifyContent='center'
         alignItems='center'
-        padding={8}>
+        padding={[2, 6, 8]}>
         <Carousel
           itemsToShow={1}
           isRTL={false}

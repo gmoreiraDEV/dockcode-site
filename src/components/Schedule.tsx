@@ -22,11 +22,11 @@ export const Schedule = (props: Props) => {
       <Button
         as='a'
         href='#mentoria'
-        width='600px'
+        width={["90%", "90%", "50%"]}
         borderRadius={0}
         background='brand.pink.500'
         color='brand.gray.100'
-        fontSize='2xl'
+        fontSize={["1xl", "2xl"]}
         fontFamily='Unica One'
         textTransform='uppercase'
         _hover={{

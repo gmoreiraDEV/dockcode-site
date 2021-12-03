@@ -1,5 +1,5 @@
-import React, { ReactElement, useState } from "react";
-import { Box, Heading, Grid, Image } from "@chakra-ui/react";
+import React, { ReactElement } from "react";
+import { Box, Heading, Grid } from "@chakra-ui/react";
 
 import rebecalima from "@public/img/clients/rebecalima.svg";
 import cali from "@public/img/clients/cali.svg";
@@ -16,20 +16,6 @@ import padocadoisColor from "@public/img/clients/colors/padocadois.svg";
 import digitalredesColor from "@public/img/clients/colors/digitalredes.svg";
 
 export default function Clients(): ReactElement {
-  const [currentSrc, setCurrentSrc] = useState("");
-  const onMouseEnter = (e) => {
-    let currentSRC = e.target.getAttribute("src");
-    let datasrc = e.target.getAttribute("datasrc");
-    setCurrentSrc(currentSRC);
-    currentSRC &&
-      (e.target.setAttribute("src", ""), e.target.setAttribute("src", datasrc));
-  };
-  const onMouseLeave = (e) => {
-    let src = currentSrc;
-    src &&
-      (e.target.setAttribute("src", ""), e.target.setAttribute("src", src));
-  };
-
   return (
     <Box
       display='flex'
@@ -45,11 +31,17 @@ export default function Clients(): ReactElement {
         color='brand.purple.900'>
         pessoas e clientes que confiaram em nós
       </Heading>
-      <Grid templateColumns='repeat(3, 1fr)' gap={12} marginTop={8}>
+      <Grid
+        templateColumns={["repeat(1, 1fr)", "repeat(2, 1fr)", "repeat(3, 1fr)"]}
+        gap={12}
+        marginTop={8}
+        justifyContent='center'
+        alignItems='center'>
         <Box
           backgroundImage={`${rebecalima.src}`}
           backgroundSize='contain'
           backgroundRepeat='no-repeat'
+          backgroundPosition='center'
           width='200px'
           height='100px'
           alt='Rebeca Lima'
@@ -61,6 +53,7 @@ export default function Clients(): ReactElement {
           backgroundImage={`${cali.src}`}
           backgroundSize='contain'
           backgroundRepeat='no-repeat'
+          backgroundPosition='center'
           width='200px'
           height='100px'
           alt='Cali Engenharia'
@@ -72,6 +65,7 @@ export default function Clients(): ReactElement {
           backgroundImage={`${esp.src}`}
           backgroundSize='contain'
           backgroundRepeat='no-repeat'
+          backgroundPosition='center'
           width='200px'
           height='100px'
           alt='ESP System'
@@ -83,6 +77,7 @@ export default function Clients(): ReactElement {
           backgroundImage={`${satech.src}`}
           backgroundSize='contain'
           backgroundRepeat='no-repeat'
+          backgroundPosition='center'
           width='200px'
           height='100px'
           alt='SATECH'
@@ -94,6 +89,7 @@ export default function Clients(): ReactElement {
           backgroundImage={`${padocadois.src}`}
           backgroundSize='contain'
           backgroundRepeat='no-repeat'
+          backgroundPosition='center'
           width='200px'
           height='100px'
           alt='Padoca à Dois'
@@ -105,6 +101,7 @@ export default function Clients(): ReactElement {
           backgroundImage={`${digitalredes.src}`}
           backgroundSize='contain'
           backgroundRepeat='no-repeat'
+          backgroundPosition='center'
           width='200px'
           height='100px'
           alt='Digital Redes'

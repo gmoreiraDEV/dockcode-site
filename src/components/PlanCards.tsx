@@ -23,7 +23,7 @@ export default function PlanCards({
           alignItems='center'
           bgGradient='linear(to-b, brand.pink.500, brand.purple.500)'
           width='350px'
-          minWidth='150px'
+          minWidth='300px'
           height='250px'
           minHeight='190px'
           p={8}
@@ -46,7 +46,7 @@ export default function PlanCards({
             color='brand.gray.100'>
             start
           </Heading>
-          <Text textAlign='center' color='brand.gray.100'>
+          <Text textAlign='center' color='brand.gray.100' width='90%'>
             {text}
           </Text>
           <Button
@@ -59,6 +59,7 @@ export default function PlanCards({
             fontSize='2xl'
             fontFamily='Unica One'
             textTransform='uppercase'
+            marginTop={[4, 6, 10]}
             _hover={{
               background: "brand.pink.500",
               color: "brand.gray.100",
@@ -75,7 +76,7 @@ export default function PlanCards({
           alignItems='center'
           bgGradient='linear(to-b, brand.purple.900, brand.pink.500)'
           width='350px'
-          minWidth='150px'
+          minWidth='300px'
           height='250px'
           minHeight='190px'
           p={8}
@@ -98,7 +99,7 @@ export default function PlanCards({
             color='brand.gray.100'>
             advanced
           </Heading>
-          <Text textAlign='center' color='brand.gray.100'>
+          <Text textAlign='center' color='brand.gray.100' width='90%'>
             {text}
           </Text>
           <Button
@@ -111,6 +112,7 @@ export default function PlanCards({
             fontSize='2xl'
             fontFamily='Unica One'
             textTransform='uppercase'
+            marginTop={[4, 6, 10]}
             _hover={{
               background: "brand.pink.500",
               color: "brand.gray.100",
@@ -127,7 +129,7 @@ export default function PlanCards({
           alignItems='center'
           bgGradient='linear(to-b, brand.purple.500, brand.purple.900)'
           width='350px'
-          minWidth='150px'
+          minWidth='300px'
           height='250px'
           minHeight='190px'
           p={8}
@@ -150,7 +152,7 @@ export default function PlanCards({
             color='brand.gray.100'>
             premium
           </Heading>
-          <Text textAlign='center' color='brand.gray.100'>
+          <Text textAlign='center' color='brand.gray.100' width='90%'>
             {text}
           </Text>
           <Button
@@ -163,6 +165,7 @@ export default function PlanCards({
             fontSize='2xl'
             fontFamily='Unica One'
             textTransform='uppercase'
+            marginTop={[4, 6, 10]}
             _hover={{
               background: "brand.pink.500",
               color: "brand.gray.100",

@@ -1,4 +1,4 @@
-import React, { ReactElement, useEffect } from "react";
+import React, { ReactElement } from "react";
 import {
   Box,
   Heading,
@@ -36,7 +36,7 @@ export default function Form(): ReactElement {
       })
       .catch(() => {
         toast({
-          title: "Ooops",
+          title: "Ooops!",
           description:
             "Aconteceu algo estranho aqui. Por favor, tente novamente.",
           status: "error",
@@ -217,7 +217,7 @@ export default function Form(): ReactElement {
           bgColor='brand.pink.500'
           borderRadius={0}
           fontFamily='Unica One'
-          fontSize='2xl'
+          fontSize={["1xl", "2xl"]}
           p={4}
           _hover={{
             bgColor: "brand.pink.900",
