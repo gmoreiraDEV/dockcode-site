@@ -7,6 +7,7 @@ import awsconfig from "../aws-exports";
 import { ChakraProvider, Container } from "@chakra-ui/react";
 
 import theme from "@styles/theme";
+import "@styles/base.css";
 import dockcodelogo from "@public/img/dockcodeLogo.png";
 
 Amplify.configure(awsconfig);
@@ -21,9 +22,9 @@ function DockCode({ Component, pageProps }: AppProps) {
         <link rel='shortcut icon' href={dockcodelogo.src} type='image/png' />
       </Head>
       <Container
-        maxWidth='100vw'
-        width='100vw'
-        height='100vh'
+        maxWidth='100%'
+        width='100%'
+        height='100%'
         margin={0}
         padding={0}>
         <Component {...pageProps} />

@@ -9,6 +9,9 @@ export default function Nav(): ReactElement {
       flex={1}
       justifyContent='space-around'
       alignItems='center'
+      flexDirection={["column", "column", "row"]}
+      position={["absolute", "absolute", "relative"]}
+      top={["150px", "150px", "0"]}
       color='brand.gray.100'>
       <Link
         p={2}

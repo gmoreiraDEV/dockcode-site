@@ -1,5 +1,4 @@
 import Document, { Head, Html, Main, NextScript } from "next/document";
-
 class DocumentDockCode extends Document {
   render() {
     return (
