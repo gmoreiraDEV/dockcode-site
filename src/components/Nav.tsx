@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react";
-import { Box, Link } from "@chakra-ui/react";
+import { Box, Link, Button } from "@chakra-ui/react";
 
 export default function Nav(): ReactElement {
   return (
@@ -78,6 +78,22 @@ export default function Nav(): ReactElement {
         href='/contato'>
         CONTATO
       </Link>
+      <Button
+        as='a'
+        href='#mentoria'
+        textTransform='uppercase'
+        bgColor='brand.pink.500'
+        borderRadius={0}
+        fontFamily='Unica One'
+        fontSize='xl'
+        marginLeft={[0, 0, 2]}
+        p={4}
+        _hover={{
+          bgColor: "brand.pink.900",
+        }}
+        zIndex={10}>
+        mentoria gratuita
+      </Button>
     </Box>
   );
 }

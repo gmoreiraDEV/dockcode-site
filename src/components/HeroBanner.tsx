@@ -53,12 +53,12 @@ export default function HeroBanner(): ReactElement {
           <Text
             width={["95%", "85%", "85%", "55%"]}
             textAlign='center'
+            fontWeight='bold'
             margin='0 auto'
             zIndex={10}>
-            Desenvolvemos seu aplicativo ou seu sistema do absolutamente zero,
-            nossa equipe conta com profissionais experientes, o que nos faz te
-            entregar um projeto excelente e com a qualidade que sua empresa
-            merece
+            Seu negócio gerenciado por profissionais. Desenvolvemos e mantemos
+            produtos da sua empresa com foco nos resultados. Solicite sua
+            mentoria grátis.
           </Text>
         </Flex>
         <Button

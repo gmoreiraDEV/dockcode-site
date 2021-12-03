@@ -55,7 +55,11 @@ export default function Form(): ReactElement {
       alignItems='center'
       p={8}
       id='mentoria'>
-      <Heading color='brand.gray.100' margin={4} textTransform='uppercase'>
+      <Heading
+        color='brand.gray.100'
+        margin={4}
+        textAlign='center'
+        textTransform='uppercase'>
         deixe seus dados e agende uma mentoria grátis
       </Heading>
 
@@ -217,7 +221,7 @@ export default function Form(): ReactElement {
           bgColor='brand.pink.500'
           borderRadius={0}
           fontFamily='Unica One'
-          fontSize={["1xl", "2xl"]}
+          fontSize={["xl", "2xl"]}
           p={4}
           _hover={{
             bgColor: "brand.pink.900",

@@ -26,7 +26,7 @@ export const Schedule = (props: Props) => {
         borderRadius={0}
         background='brand.pink.500'
         color='brand.gray.100'
-        fontSize={["1xl", "2xl"]}
+        fontSize={["xl", "2xl"]}
         fontFamily='Unica One'
         textTransform='uppercase'
         _hover={{

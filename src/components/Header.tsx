@@ -1,5 +1,5 @@
 import React, { ReactElement, useState } from "react";
-import { Flex, Spacer } from "@chakra-ui/react";
+import { Flex, Spacer, Button } from "@chakra-ui/react";
 
 import Nav from "./Nav";
 import Logo from "./Logo";
@@ -24,6 +24,7 @@ export default function Header(): ReactElement {
       <Spacer />
       <Flex flexDirection={["column-reverse", "column-reverse", "row"]}>
         {menuOpen && <Nav />}
+
         <NavButton handleMenuOpen={handleMenuOpen} menuOpen={menuOpen} />
       </Flex>
     </Flex>

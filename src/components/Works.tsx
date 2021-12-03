@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Heading, Text } from "@chakra-ui/react";
+import Cards from "./Cards";
 
 export const Works = () => {
   return (
@@ -14,9 +15,11 @@ export const Works = () => {
       textAlign='center'>
       <Heading textTransform='uppercase'>o que nós fazemos?</Heading>
       <Text width='55%'>
-        Criamos soluções sob medida, analisando seu modelo de negócio e
-        melhorando seu produto atual, ou até mesmo criando ele do absoluto zero
+        Nós visualizamos e implementamos seus objetivos de negócios criando
+        soluções sob medida, analisando seu modelo de negócio e melhorando seu
+        produto atual, ou até mesmo criando ele do absoluto zero
       </Text>
+      <Cards />
     </Box>
   );
 };
