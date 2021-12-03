@@ -16,14 +16,16 @@ export default function Header(): ReactElement {
     <Flex
       justifyContent='space-between'
       alignItems='center'
+      flexDirection={["column", "column", "row"]}
       width='100%'
       bg='brand.purple.900'
-      p={4}>
+      padding={4}>
       <Logo />
       <Spacer />
-
-      {menuOpen && <Nav />}
-      <NavButton handleMenuOpen={handleMenuOpen} menuOpen={menuOpen} />
+      <Flex flexDirection={["column-reverse", "column-reverse", "row"]}>
+        {menuOpen && <Nav />}
+        <NavButton handleMenuOpen={handleMenuOpen} menuOpen={menuOpen} />
+      </Flex>
     </Flex>
   );
 }

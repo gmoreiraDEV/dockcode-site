@@ -10,63 +10,68 @@ export default function Nav(): ReactElement {
       justifyContent='space-around'
       alignItems='center'
       flexDirection={["column", "column", "row"]}
-      position={["absolute", "absolute", "relative"]}
-      top={["150px", "150px", "0"]}
+      right={0}
       color='brand.gray.100'>
       <Link
         p={2}
         fontWeight='bold'
         textDecoration='none'
         _hover={{
-          bg: "brand.pink.500",
+          background: "brand.pink.500",
+          color: "brand.purple.900",
+          borderRadius: "0",
+        }}
+        _focus={{
+          background: "brand.pink.500",
+          color: "brand.purple.900",
+          borderRadius: "0",
+        }}
+        _active={{
+          background: "brand.pink.500",
           color: "brand.purple.900",
           borderRadius: "0",
         }}
         href='/'>
         INÍCIO
       </Link>
-      {/* <Link
-        p={2}
-        fontWeight='bold'
-        textDecoration='none'
-        _hover={{
-          bg: "brand.pink.500",
-          color: "brand.purple.900",
-          borderRadius: "0",
-        }}
-        href='#'>
-        CASES
-      </Link> */}
       <Link
         p={2}
         fontWeight='bold'
         textDecoration='none'
         _hover={{
-          bg: "brand.pink.500",
+          background: "brand.pink.500",
+          color: "brand.purple.900",
+          borderRadius: "0",
+        }}
+        _focus={{
+          background: "brand.pink.500",
+          color: "brand.purple.900",
+          borderRadius: "0",
+        }}
+        _active={{
+          background: "brand.pink.500",
           color: "brand.purple.900",
           borderRadius: "0",
         }}
         href='/planos'>
         PLANOS
       </Link>
-      {/* <Link
-        p={2}
-        fontWeight='bold'
-        textDecoration='none'
-        _hover={{
-          bg: "brand.pink.500",
-          color: "brand.purple.900",
-          borderRadius: "0",
-        }}
-        href='#'>
-        ORÇAMENTO
-      </Link> */}
       <Link
         p={2}
         fontWeight='bold'
         textDecoration='none'
         _hover={{
-          bg: "brand.pink.500",
+          background: "brand.pink.500",
+          color: "brand.purple.900",
+          borderRadius: "0",
+        }}
+        _focus={{
+          background: "brand.pink.500",
+          color: "brand.purple.900",
+          borderRadius: "0",
+        }}
+        _active={{
+          background: "brand.pink.500",
           color: "brand.purple.900",
           borderRadius: "0",
         }}

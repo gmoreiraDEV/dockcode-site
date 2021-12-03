@@ -18,14 +18,14 @@ export default function Footer(): ReactElement {
       background='brand.gray.100'
       color='brand.purple.900'
       textAlign='center'>
-      <Text
+      <Box
         display='flex'
         justifyContent='center'
         alignItems='center'
         flexDirection={["column", "column", "row"]}
         textAlign={["center", "center", "left"]}
         textTransform='uppercase'
-        fontSize={["sm", "md", "4xl"]}
+        fontSize={["sm", "2xl", "3xl"]}
         fontFamily='Unica One'>
         <Text
           display='flex'
@@ -34,8 +34,8 @@ export default function Footer(): ReactElement {
           fontWeight='bold'>
           {year} <Icon as={MdCopyright} />
         </Text>
-        todos os direitos reservados
-      </Text>
+        <Text>todos os direitos reservados</Text>
+      </Box>
       <Image src={dockcodeLogo.src} alt='DOCKCODE' width='25%' />
     </Box>
   );
