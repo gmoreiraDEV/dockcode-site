@@ -19,6 +19,11 @@ function DockCode({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
       <Head>
+        <meta charSet='UTF-8' />
+        <meta httpEquiv='X-UA-Compatible' content='IE=edge' />
+        <meta
+          name='viewport'
+          content='width=device-width, initial-scale=1.0'></meta>
         <link rel='shortcut icon' href={dockcodelogo.src} type='image/png' />
       </Head>
       <Container
