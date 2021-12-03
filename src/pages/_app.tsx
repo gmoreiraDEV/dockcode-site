@@ -3,9 +3,9 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import Amplify from "aws-amplify";
 import TagManager from "react-gtm-module";
-import awsconfig from "../aws-exports";
 import { ChakraProvider, Container } from "@chakra-ui/react";
 
+import awsconfig from "src/aws-exports";
 import theme from "@styles/theme";
 import "@styles/base.css";
 import dockcodelogo from "@public/img/dockcodeLogo.png";
