@@ -62,6 +62,8 @@ export default function HeroBanner(): ReactElement {
           </Text>
         </Flex>
         <Button
+          as='a'
+          href='#mentoria'
           textTransform='uppercase'
           bgColor='brand.pink.500'
           borderRadius={0}
