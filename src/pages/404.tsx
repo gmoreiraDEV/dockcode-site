@@ -18,28 +18,20 @@ function Custom404(): ReactElement {
         backgroundPosition='bottom'
         backgroundRepeat='no-repeat'
         backgroundSize='cover'>
+        <Text
+          bgGradient='linear(to-br, brand.pink.900, brand.pink.500, brand.purple.900)'
+          bgClip='text'
+          marginBottom={-50}
+          fontSize='15em'
+          fontWeight='extrabold'>
+          404
+        </Text>
         <Heading color='brand.gray.100' fontSize='4xl'>
           Oops!
         </Heading>
         <Text color='brand.gray.100' fontSize='xl'>
           Página não encontrada.
         </Text>
-        <Divider
-          orientation='horizontal'
-          borderWidth='medium'
-          borderColor='brand.pink.500'
-          width='50%'
-        />
-        <Text
-          bgGradient='linear(to-br, brand.pink.900, brand.pink.500, brand.purple.900)'
-          bgClip='text'
-          marginTop={-50}
-          marginBottom={0}
-          fontSize='15em'
-          fontWeight='extrabold'>
-          404
-        </Text>
-
         <Flex
           justifyContent='space-around'
           alignItems='center'
