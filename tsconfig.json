@@ -23,6 +23,12 @@
       "@graphql/*": ["./src/graphql/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/aws-exports.js"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/aws-exports.js",
+    "next.config.js"
+  ],
   "exclude": ["node_modules"]
 }
