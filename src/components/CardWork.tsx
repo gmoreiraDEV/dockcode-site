@@ -1,15 +1,22 @@
 import React, { ReactElement } from "react";
-import { Flex, Heading, Button } from "@chakra-ui/react";
+import { Flex, Heading, Image, Button } from "@chakra-ui/react";
 import { MdArrowRightAlt } from "react-icons/md";
 
 interface Props {
   title: string;
+  imageURL: string;
 }
 
-export default function CardWork({ title }: Props): ReactElement {
+export default function CardWork({ title, imageURL }: Props): ReactElement {
   return (
-    <Flex>
+    <Flex
+      padding={4}
+      width='200px'
+      borderColor='brand.purple.500'
+      borderWidth='3px'
+      flexDirection='column'>
       <Heading>{title}</Heading>
+      <Image src={imageURL} alt={title} />
       <Button
         textTransform='uppercase'
         color='brand.gray.100'
