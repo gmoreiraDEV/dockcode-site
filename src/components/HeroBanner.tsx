@@ -1,14 +1,21 @@
 import React, { ReactElement, useRef } from "react";
+import { useRouter } from "next/router";
 import Image from "next/image";
 import { chakra, Box, Heading, Text, Button, Flex } from "@chakra-ui/react";
 
 import starsSpace from "@public/img/starsSpace.png";
 import rocket from "@public/img/rocket.png";
+import PushToMentoring from "@utils/pushToMentoring";
 
 const ChakraImage = chakra(Image);
 
 export default function HeroBanner(): ReactElement {
+  const router = useRouter();
   const rocketRef = useRef(null);
+
+  async function handlePush() {
+    await PushToMentoring(router);
+  }
 
   function moveRocket(event): void {
     const speed = 5;
@@ -62,8 +69,7 @@ export default function HeroBanner(): ReactElement {
           </Text>
         </Flex>
         <Button
-          as='a'
-          href='#mentoria'
+          onClick={handlePush}
           textTransform='uppercase'
           bgColor='brand.pink.500'
           borderRadius={0}

@@ -1,9 +1,16 @@
 import React from "react";
+import { useRouter } from "next/router";
 import { Box, Heading, Text, Button } from "@chakra-ui/react";
+import PushToMentoring from "@utils/pushToMentoring";
 
 interface Props {}
 
 export const Schedule = (props: Props) => {
+  const router = useRouter();
+
+  async function handlePush() {
+    await PushToMentoring(router);
+  }
   return (
     <Box
       display='flex'
@@ -20,8 +27,7 @@ export const Schedule = (props: Props) => {
         ter negócio alcançando todos os seus potenciais clientes
       </Text>
       <Button
-        as='a'
-        href='#mentoria'
+        onClick={handlePush}
         width={["90%", "90%", "50%"]}
         borderRadius={0}
         background='brand.pink.500'
