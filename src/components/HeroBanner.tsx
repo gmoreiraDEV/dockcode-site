@@ -3,8 +3,8 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import { chakra, Box, Heading, Text, Button, Flex } from "@chakra-ui/react";
 
-import starsSpace from "@public/img/starsSpace.png";
-import rocket from "@public/img/rocket.png";
+import galaxy from "@public/img/galaxy.png";
+import planet from "@public/img/planet.png";
 import PushToMentoring from "@utils/pushToMentoring";
 
 const ChakraImage = chakra(Image);
@@ -27,9 +27,10 @@ export default function HeroBanner(): ReactElement {
 
   return (
     <Box
-      bgImage={`${starsSpace.src}`}
+      bgImage={`${galaxy.src}`}
       bgSize='cover'
       bgPosition='bottom'
+      bgRepeat='no-repeat'
       position='relative'
       overflow='hidden'
       onMouseMove={moveRocket}
@@ -40,7 +41,7 @@ export default function HeroBanner(): ReactElement {
         top={["200px", "100px", "30px", "0"]}
         as='div'
         ref={rocketRef}>
-        <ChakraImage src={rocket} width={50} height={50} alt='DOCKCODE' />
+        <ChakraImage src={planet} width={50} height={50} alt='DOCKCODE' />
       </Box>
       <Box
         display='flex'
@@ -57,6 +58,16 @@ export default function HeroBanner(): ReactElement {
           <Heading textTransform='uppercase' textAlign='center' zIndex={10}>
             acreditamos na sua idéia desde o início
           </Heading>
+          <Text
+            width={["95%", "85%", "85%", "55%"]}
+            textAlign='center'
+            fontWeight='bold'
+            margin='0 auto'
+            zIndex={10}>
+            Seu negócio gerenciado por profissionais. Desenvolvemos e mantemos
+            produtos da sua empresa com foco nos resultados. Solicite sua
+            mentoria grátis.
+          </Text>
           <Text
             width={["95%", "85%", "85%", "55%"]}
             textAlign='center'
