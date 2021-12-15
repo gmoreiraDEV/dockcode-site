@@ -36,6 +36,14 @@ export default function HeroBanner(): ReactElement {
       onMouseMove={moveRocket}
       color='brand.gray.100'>
       <Box
+        position={"absolute"}
+        width={"100vw"}
+        height={"100px"}
+        bgColor='brand.gray.900'
+        bottom={0}
+        left={0}
+      />
+      <Box
         zIndex={0}
         position='absolute'
         top={["200px", "100px", "30px", "0"]}
@@ -55,44 +63,51 @@ export default function HeroBanner(): ReactElement {
           justifyContent='flex-start'
           alignItems='center'
           flexDirection='column'>
-          <Heading textTransform='uppercase' textAlign='center' zIndex={10}>
+          <Heading
+            textTransform='uppercase'
+            fontSize='5xl'
+            textAlign='center'
+            zIndex={10}>
             acreditamos na sua idéia desde o início
           </Heading>
-          <Text
-            width={["95%", "85%", "85%", "55%"]}
-            textAlign='center'
-            fontWeight='bold'
-            margin='0 auto'
-            zIndex={10}>
-            Seu negócio gerenciado por profissionais. Desenvolvemos e mantemos
-            produtos da sua empresa com foco nos resultados. Solicite sua
-            mentoria grátis.
-          </Text>
-          <Text
-            width={["95%", "85%", "85%", "55%"]}
-            textAlign='center'
-            fontWeight='bold'
-            margin='0 auto'
-            zIndex={10}>
-            Seu negócio gerenciado por profissionais. Desenvolvemos e mantemos
-            produtos da sua empresa com foco nos resultados. Solicite sua
-            mentoria grátis.
-          </Text>
         </Flex>
-        <Button
-          onClick={handlePush}
-          textTransform='uppercase'
-          bgColor='brand.pink.500'
-          borderRadius={0}
-          fontFamily='Unica One'
-          fontSize='2xl'
-          p={8}
-          _hover={{
-            bgColor: "brand.pink.900",
-          }}
-          zIndex={10}>
-          mentoria gratuita
-        </Button>
+        <Flex direction='column'>
+          <Text
+            width={["95%", "85%", "85%"]}
+            textAlign='center'
+            fontSize='xl'
+            margin='0 auto'
+            padding={2}
+            zIndex={10}>
+            Vamos elevar sua marca a um outro nível utilizando o que há de mais
+            atual no digital e no universo de aplicativos. Desenvolvemos e
+            modernizamos os produtos da sua empresa com foco em resultados.
+          </Text>
+          <Text
+            width={["95%", "85%", "85%"]}
+            textAlign='center'
+            fontSize='xl'
+            fontWeight='900'
+            padding={2}
+            margin='0 auto'
+            zIndex={10}>
+            Solicite sua mentoria grátis e seja bem vindo ao seu novo mundo.
+          </Text>
+          <Button
+            onClick={handlePush}
+            textTransform='uppercase'
+            bgColor='brand.pink.500'
+            borderRadius={0}
+            fontFamily='Unica One'
+            fontSize='2xl'
+            p={8}
+            _hover={{
+              bgColor: "brand.pink.900",
+            }}
+            zIndex={10}>
+            mentoria gratuita
+          </Button>
+        </Flex>
       </Box>
     </Box>
   );
